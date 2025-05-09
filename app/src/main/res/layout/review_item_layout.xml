@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:paddingVertical="8dp"
+    android:paddingStart="24dp"
+    android:paddingEnd="16dp">
+
+    <TextView
+        android:id="@+id/tvAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/netflix_sans_medium"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@id/ratingLayout"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@+id/tvContentReview"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="John Doe" />
+
+    <LinearLayout
+        android:id="@+id/ratingLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/tvAuthor"
+        app:layout_constraintStart_toEndOf="@id/tvAuthor"
+        app:layout_constraintTop_toTopOf="@id/tvAuthor">
+
+        <TextView
+            android:id="@+id/tvRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/netflix_sans_regular"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvAuthor"
+            app:layout_constraintEnd_toStartOf="@id/tvRatingMax"
+            app:layout_constraintStart_toEndOf="@id/tvAuthor"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="7.0" />
+
+        <TextView
+            android:id="@+id/tvRatingMax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/netflix_sans_regular"
+            android:text="/10"
+            android:textColor="@color/accent_secondary"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvRating"
+            app:layout_constraintStart_toEndOf="@+id/tvRating"
+            app:layout_constraintTop_toTopOf="@+id/tvRating" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvContentReview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:fontFamily="@font/netflix_sans_regular"
+        android:maxLines="2"
+        android:textColor="@color/accent_secondary"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnNavRate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAuthor"
+        tools:text="Went in not paying attention to any of the drama surrounding the movie. The movie was just like the trailers, boring. Terrible fight choreography and all in acting by Brie. Cinematography was so bad, way too many cuts. Samuel L Jackson and Goose were brilliant and Mendelsohn was incredible as Talos. \r\nThe movie relied too much in 90s nostalgia. \r\nNot great when the main actor is out done by a cat." />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnNavRate"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/formkit_right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLoadMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/netflix_sans_medium"
+        android:paddingHorizontal="24dp"
+        android:text="@string/load_more"
+        android:textAllCaps="false"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

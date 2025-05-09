@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MovieCloneApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="category">Category</string>
+    <string name="basic_error_message">Something went wrong, please try again</string>
+    <string name="tryAgain">Try Again</string>
+    <string name="load_more">Load more</string>
+    <string name="review">Review</string>
+    <string name="empty_reviews">No reviews have been added yet.</string>
+    <string name="review_written_by">Written by %1$s on %2$s</string>
+</resources>

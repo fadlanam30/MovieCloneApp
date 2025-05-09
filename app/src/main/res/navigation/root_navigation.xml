@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_navigation"
+    app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="tech.fadlan.moviecloneapp.presentation.ui.splashscreen.SplashScreenFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen">
+        <action
+            android:id="@+id/action_splashScreenFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="tech.fadlan.moviecloneapp.presentation.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_detailMovieFragment"
+            app:destination="@id/detailMovieFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailMovieFragment"
+        android:name="tech.fadlan.moviecloneapp.presentation.ui.detail.DetailMovieFragment"
+        android:label="fragment_detail_movie"
+        tools:layout="@layout/fragment_detail_movie" >
+        <argument
+            android:name="movieId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_detailMovieFragment_to_reviewMovieFragment"
+            app:destination="@id/reviewMovieFragment" />
+        <action
+            android:id="@+id/action_detailMovieFragment_to_detailReviewFragment"
+            app:destination="@id/detailReviewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reviewMovieFragment"
+        android:name="tech.fadlan.moviecloneapp.presentation.ui.review.ReviewMovieFragment"
+        android:label="fragment_review_movie"
+        tools:layout="@layout/fragment_review_movie" >
+        <argument
+            android:name="movieId"
+            app:argType="integer" />
+        <argument
+            android:name="movieName"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_reviewMovieFragment_to_detailReviewFragment"
+            app:destination="@id/detailReviewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailReviewFragment"
+        android:name="tech.fadlan.moviecloneapp.presentation.ui.review.DetailReviewFragment"
+        android:label="fragment_detail_review"
+        tools:layout="@layout/fragment_detail_review" >
+        <argument
+            android:name="movieName"
+            app:argType="string" />
+        <argument
+            android:name="movieReview"
+            app:argType="tech.fadlan.moviecloneapp.domain.model.ReviewItem" />
+    </fragment>
+</navigation>

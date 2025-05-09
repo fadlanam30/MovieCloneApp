@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/genreNameTv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="12dp"
+    android:fontFamily="@font/netflix_sans_regular"
+    android:gravity="center"
+    android:textColor="#B1B1B1"
+    android:textSize="18sp"
+    tools:text="Beranda" />
